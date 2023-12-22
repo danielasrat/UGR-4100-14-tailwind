@@ -4,62 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-100">
     <header>
-        <nav>
-            <ul class="nav-bar">
-                <li class='title'><a href='./HomePage.html'>Portfolio</a></li>
-                <input type='checkbox' id='check' />
-                <span class="menu">
+        <nav class="bg-gray-800 flex justify-between items-center text-white p-4">
+            <div class="flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-white focus:outline-none md:hidden" id="mobile-menu-button">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <a class="text-lg font-bold ml-4" href="./HomePage.html">Portfolio</a>
+            </div>        
+            <div class="hidden md:flex items-center flex-grow justify-center space-x-20">
+                <a class="hover:text-gray-300" href="./HomePage.html">Home</a>
+                <a class="hover:text-gray-300" href="./Services.html">Services</a>
+                <a class="hover:text-gray-300" href="./Experiences.html">Experiences</a>
+                <a class="hover:text-gray-300" href="./Works.html">Works</a>
+            </div>        
+            <div class="hidden md:flex items-center space-x-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Contact me</button>
+            </div>
+        
+            <div id="mobile-menu" class="md:hidden">
+                <a class="block text-white hover:text-gray-300 mb-2" href="./HomePage.html">Home</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Services.html">Services</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Experiences.html">Experiences</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Works.html">Works</a>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Contact me</button>
+            </div>
+        </nav>
+    </header>
+    <main class="section">
+        <div class="container mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold">My Experiences</h2>
+
+                <ul class="list-disc pl-6 mt-4">
+                    <li>
+                        <strong>Customer Service Representative - ABC Inc.</strong>
+                        <p class="text-gray-700">June 2021 - May 2023</p>
+                        <ul class="list-disc pl-6">
+                            <li>Answered customer inquiries via phone and email</li>
+                            <li>Resolved customer complaints and issues</li>
+                            <li>Maintained customer records and updated account information</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <img class="mt-8 rounded" src="./images/Experienceimg.jpg" alt="Experience Image">
+
+                <ul class="list-disc pl-6 mt-4">
+                    <li>
+                        <strong>Administrative Assistant - XYZ Corp.</strong>
+                        <p class="text-gray-700">June 2022 - Present</p>
+                        <ul class="list-disc pl-6">
+                            <li>Assisted with scheduling appointments and meetings</li>
+                            <li>Managed incoming and outgoing mail and correspondence</li>
+                            <li>Prepared reports and presentations using Microsoft Office Suite</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold">Skills</h2>
+                <ul class="list-disc pl-6 mt-4">
+                    <li>JavaScript: ⭐️⭐️⭐️⭐️⭐️</li>
+                    <li>Java: ⭐️⭐️⭐️</li>
+                    <li>Python: ⭐️⭐️⭐️⭐️</li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold">Awards and Certifications</h2>
+                <ul class="list-disc pl-6 mt-4">
+                    <li>Employee of the Month - ABC Inc. (August 2023)</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto flex flex-row items-center justify-evenly md:items-start">
+            <div class="md:w-1/2 mb-4 md:mb-0">
+                <h4 class="text-2xl mb-4">Social Media</h4>
+                <ul class="flex flex-col space-y-2 md:space-y-4">
+                    <li><a id="facebook" class="fa fa-facebook"></a></li>
+                    <li><a id="instagram" class="fa fa-instagram"></a></li>
+                    <li><a id="youtube" class="fa fa-youtube"></a></li>
+                    <li><a id="linkedin" class="fa fa-linkedin"></a></li>
+                </ul>
+            </div>
+            <div class="md:w-1/2">
+                <h4 class="text-2xl mb-4">Pages</h4>
+                <ul class="flex flex-col space-y-2 md:space-y-4">
                     <li><a href="./HomePage.html">Home</a></li>
                     <li><a href="./Services.html">Services</a></li>
                     <li><a href="./Experiences.html">Experiences</a></li>
                     <li><a href="./Works.html">Works</a></li>
-                    <li><button class="button" id="button1">Contact me</button></li>
-                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-                </span>
-                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h2>My Experiences</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint vero, nemo incidunt minima facere odit laudantium ad? Assumenda voluptatum asperiores architecto dolorem saepe accusamus quam, tempore quo, iste facilis ut.</p>
-        <img class="image" src="./images/Experienceimg.jpg" alt="">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam autem, facilis unde ab vel est quod repellat a obcaecati temporibus harum repudiandae cupiditate accusamus, quis pariatur laborum magni molestias qui.</p>
-        
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quos pariatur dolorem? Alias saepe suscipit delectus facilis hic sequi, eos possimus sit nihil necessitatibus laudantium. Temporibus harum consectetur delectus veniam.</p>
-
-        <p id="lastp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, id maxime dolorum ratione numquam blanditiis sapiente corrupti ipsa. Accusamus enim veniam hic! Id, adipisci explicabo accusantium repellat impedit unde<br> quisquam!<a href="">Full Portfolio</a>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa illo aut, at, corrupti tempora quod dolores nostrum, et voluptas nisi aliquam? Possimus fugiat recusandae suscipit, laboriosam minus quae inventore repudiandae.<a href="">Contact me</a> Any time.</p>
-
-
-    </main>
-    <footer>
-        <div class="footerbox">
-                <div>
-                    <ul class="links">
-                        <h4>Social Media:</h4>
-                        <li><a href="#" class="fa fa-facebook"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                        <li><a href="#" class="fa fa-youtube"></a></li>
-                        <li><a href="#" class="fa fa-linkedin"></a></li>                       
-                    </ul>
-                </div>
-                <div>
-                    <ul class="pages">
-                        <h4>Pages</h4>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Experiences</a></li>
-                        <li><a href="">Works</a></li>
-                    </ul>
-                </div>
+                </ul>
+            </div>
         </div>
-        <h5>Copyright &copy; 2023 Daniel Asrat</h5>
+        <div class="text-center mt-4">
+            <h5 class="text-lg text-black-500">Copyright &copy; 2023 Daniel Asrat</h5>
+        </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
+
 </html>

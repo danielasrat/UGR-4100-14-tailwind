@@ -5,68 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="./dist/output.css" rel="stylesheet">  
 </head>
-<body>
+<body class="bg-gray-100">
     <header>
-        <nav>
-            <ul class="nav-bar">
-                <li class='title'><a href='./HomePage.html'>Portfolio</a></li>
-                <input type='checkbox' id='check' />
-                <span class="menu">
-                    <li><a href="./HomePage.html">Home</a></li>
-                    <li><a href="./Services.html">Services</a></li>
-                    <li><a href="./Experiences.html">Experiences</a></li>
-                    <li><a href="./Works.html">Works</a></li>
-                    <li><button class="button" id="button1">Contact me</button></li>
-                    <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-                </span>
-                <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-            </ul>
+        <nav class="bg-gray-800 flex justify-between items-center text-white p-4">
+            <div class="flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-white focus:outline-none md:hidden" id="mobile-menu-button">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <a class="text-lg font-bold ml-4" href="./HomePage.html">Portfolio</a>
+            </div>
+        
+            <div class="hidden md:flex items-center flex-grow justify-center space-x-20">
+                <a class="hover:text-gray-300" href="./HomePage.html">Home</a>
+                <a class="hover:text-gray-300" href="./Services.html">Services</a>
+                <a class="hover:text-gray-300" href="./Experiences.html">Experiences</a>
+                <a class="hover:text-gray-300" href="./Works.html">Works</a>
+            </div>
+        
+            <div class="hidden md:flex items-center space-x-4">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Contact me</button>
+            </div>
+        
+            <div id="mobile-menu" class="md:hidden">
+                <a class="block text-white hover:text-gray-300 mb-2" href="./HomePage.html">Home</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Services.html">Services</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Experiences.html">Experiences</a>
+                <a class="block text-white hover:text-gray-300 mb-2" href="./Works.html">Works</a>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Contact me</button>
+            </div>
         </nav>
     </header>
-    <main class="main">
-        <h2 id="h2service">Services</h2>
-        <div id="design">
-        <div class="Service1">
-            <h3 id="h3service">qwertyuiop</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam quaerat, eveniet neque laboriosam illum saepe cumque maxime repellendus reiciendis dicta possimus labore aut officiis sunt culpa fuga in, eaque tempora?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, fugiat minima? Esse delectus laudantium autem expedita optio dolore cumque eius recusandae fugit minus nihil placeat quis, vitae eaque molestias eligendi?</p>
+<main class="section">
+    <h2 class="title text-3xl font-bold has-text-centered mt-6">Services</h2>        
+    <div class="grid grid-cols-1 mt-10 md:grid-cols-2 gap-8">
+        <div class="md:col-span-1">
+            <h3 class="title is-3">UI Design-Figma</h3>
+            <p class="mt-4">As a UI designer specializing in Figma, I offer a range of services to help you bring your design ideas to life. With my expertise in Figma, I can create visually stunning and user-friendly interfaces that align with your brand and target audience.
+                Using Figma's powerful features, I can design custom UI elements, including icons, buttons, forms, and navigation menus. I will ensure that the design elements are consistent, visually appealing, and optimized for usability. By leveraging Figma's component and style functionalities, I can create a design system that promotes consistency and scalability across your entire application or website.
+                With a focus on responsive design, I will ensure that your UI design seamlessly adapts to different screen sizes and devices.</p>    
         </div>
-        <div class="Service2">
-            <h3 id="h3service">qwertyuiop</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam quaerat, eveniet neque laboriosam illum saepe cumque maxime repellendus reiciendis dicta possimus labore aut officiis sunt culpa fuga in, eaque tempora?</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, fugiat minima? Esse delectus laudantium autem expedita optio dolore cumque eius recusandae fugit minus nihil placeat quis, vitae eaque molestias eligendi?</p>
+        <div class="md:col-span-1">
+            <h3 class="title is-3">UI Design-Figma & VsCode</h3>
+            <p class="mt-4">As a UI designer specializing in Figma, I offer a range of services to help you bring your design ideas to life. With my expertise in Figma, I can create visually stunning and user-friendly interfaces that align with your brand and target audience.
+                Using Figma's powerful features, I can design custom UI elements, including icons, buttons, forms, and navigation menus. I will ensure that the design elements are consistent, visually appealing, and optimized for usability. By leveraging Figma's component and style functionalities, I can create a design system that promotes consistency and scalability across your entire application or website.
+                With a focus on responsive design, I will ensure that your UI design seamlessly adapts to different screen sizes and devices.</p>
         </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div class="md:col-span-1">
+            <img class="w-full h-auto" src="./images/Servicesimg.jpg" alt="">
         </div>
-        <div class="imgContainer">
-            <img class="imageservice" src="./images/Servicesimg.jpg" alt="">
-            <img class="imageservice" src="./images/Servicesimg.jpg" alt="">
-            <img class="imageservice" src="./images/Servicesimg.jpg" alt="">
+        <div class="md:col-span-1">
+            <img class="w-full h-auto" src="./images/Servicesimg.jpg" alt="">
         </div>
-    </main>
-    <footer>
-        <div class="footerbox">
-                <div>
-                    <ul class="links">
-                        <h4>Social Media:</h4>
-                        <li><a href="#" class="fa fa-facebook"></a></li>
-                        <li><a href="#" class="fa fa-instagram"></a></li>
-                        <li><a href="#" class="fa fa-youtube"></a></li>
-                        <li><a href="#" class="fa fa-linkedin"></a></li>                       
-                    </ul>
-                </div>
-                <div>
-                    <ul class="pages">
-                        <h4>Pages</h4>
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">Experiences</a></li>
-                        <li><a href="">Works</a></li>
-                    </ul>
-                </div>
+        <div class="md:col-span-1">
+            <img class="w-full h-auto" src="./images/Servicesimg.jpg" alt="">
         </div>
-        <h5>Copyright &copy; 2023 Daniel Asrat</h5>
-    </footer>
+    </div>
+</main>   
+<footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto flex flex-row items-center justify-evenly md:items-start">
+        <div class="md:w-1/2 mb-4 md:mb-0">
+            <h4 class="text-2xl mb-4">Social Media</h4>
+            <ul class="flex flex-col space-y-2 md:space-y-4">
+                <li><a id="facebook" class="fa fa-facebook"></a></li>
+                <li><a id="instagram" class="fa fa-instagram"></a></li>
+                <li><a id="youtube" class="fa fa-youtube"></a></li>
+                <li><a id="linkedin" class="fa fa-linkedin"></a></li>
+            </ul>
+        </div>
+        <div class="md:w-1/2">
+            <h4 class="text-2xl mb-4">Pages</h4>
+            <ul class="flex flex-col space-y-2 md:space-y-4">
+                <li><a href="./HomePage.html">Home</a></li>
+                <li><a href="./Services.html">Services</a></li>
+                <li><a href="./Experiences.html">Experiences</a></li>
+                <li><a href="./Works.html">Works</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="text-center mt-4">
+        <h5 class="text-lg text-black-500">Copyright &copy; 2023 Daniel Asrat</h5>
+    </div>
+</footer>    
+<script src="./js/index.js"></script>
 </body>
 </html>
